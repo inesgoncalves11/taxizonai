@@ -1,0 +1,239 @@
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.title {
+  margin: 4rem;
+  font-weight: 600;
+  text-align: center;
+  font-size: 24px;
+}
+.form {
+  margin: 3rem 1em;
+  display: flex;
+  height: 500px;
+}
+.container__left {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+.container__right {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.container__inputs {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+.container_date {
+  display: flex;
+  flex-direction: column;
+}
+.container__mobile {
+  display: none;
+}
+.container_passenger {
+  display: flex;
+  flex-direction: column;
+}
+.container_days {
+  display: flex;
+  flex-direction: column;
+}
+.options {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+}
+.option {
+  position: relative;
+}
+.labels {
+  font-family: "Quicksand", sans-serif;
+  padding: 10px 0;
+  width: 100%;
+  font-size: 14px;
+}
+.checkboxitem {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+.checkboxitem:checked + .label__check {
+  background: rgb(230, 181, 117);
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+}
+.input__text {
+  height: 25px;
+  width: 70%;
+  border: 1px solid rgb(226, 226, 226);
+}
+.input__tel {
+  height: 25px;
+  width: 25%;
+  border: 1px solid rgb(226, 226, 226);
+}
+.input__checkbox {
+  width: 30px;
+  height: 15px;
+  padding: 0;
+  margin: 0;
+}
+.labelcheckbox {
+  font-size: 14px;
+  padding: 0;
+}
+.textarea {
+  height: 80px;
+  width: 94%;
+  resize: none;
+  padding: 10px;
+  border: 1px solid rgb(226, 226, 226);
+  font-family: "Quicksand", sans-serif;
+}
+.input__passenger,
+.input__days {
+  height: 25px;
+
+  width: 50%;
+  border: 1px solid rgb(226, 226, 226);
+}
+.input__date {
+  height: 25px;
+  color: rgb(138, 138, 138);
+  border: 1px solid rgb(226, 226, 226);
+}
+.label__check {
+  background: white;
+  padding: 5px;
+  text-align: center;
+  height: 25px;
+  border: 1px solid rgb(226, 226, 226);
+  color: black;
+  width: 70%;
+  display: block;
+}
+.button {
+  width: 80%;
+  height: 35px;
+  margin-top: 2rem;
+  color: white;
+  background-color: rgb(230, 181, 117);
+  border-radius: 5px;
+  border: none;
+}
+.button:hover {
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  .form {
+    width: 100%;
+    flex-direction: column;
+    height: auto;
+    margin: 2rem auto;
+  }
+
+  .container__left {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .container__right {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .container__inputs {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+
+  .container_days,
+  .container_passenger,
+  .container_date {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .labels {
+    text-align: center;
+  }
+  .input__text {
+    width: 100%;
+    border: 1px solid rgb(226, 226, 226);
+  }
+  .input__tel {
+    margin: 0 auto;
+    height: 25px;
+    width: 50%;
+    border: 1px solid rgb(226, 226, 226);
+  }
+  .input__checkbox {
+    width: 30px;
+    height: 15px;
+    padding: 0;
+    margin: 0;
+  }
+  .button {
+    width: 100%;
+  }
+  .container__web {
+    display: none;
+  }
+  .input__date {
+    margin: 0 auto;
+  }
+  .input__days,
+  .input__passenger {
+    margin: 0 auto;
+    width: 40%;
+  }
+
+  .options {
+    margin: 1rem auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 90%;
+    padding: 5px;
+  }
+
+  .label__check {
+    margin: 0 auto;
+  }
+  .textarea {
+    margin: 1rem auto;
+    width: 90%;
+    height: 100px;
+  }
+  .title {
+    width: 100%;
+    margin: 1rem auto;
+  }
+  .container__mobile {
+    display: contents;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+  .container__inputs {
+    gap: 25px;
+  }
+}
